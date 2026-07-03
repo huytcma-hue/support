@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support @amazondom666</title>
+  <meta name="description" content="Official USDT TRC-20 donation page for @amazondom666.">
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Arial, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(255, 214, 102, 0.23), transparent 30%),
+        radial-gradient(circle at 100% 100%, rgba(108, 92, 231, 0.20), transparent 32%),
+        linear-gradient(180deg, #080808 0%, #111114 100%);
+      display: flex;
+      justify-content: center;
+      padding: 26px 15px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 34px;
+      padding: 28px;
+      background: rgba(20, 20, 24, 0.82);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 28px 90px rgba(0,0,0,0.55);
+      backdrop-filter: blur(20px);
+    }
+
+    .topline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255, 214, 102, 0.12);
+      border: 1px solid rgba(255, 214, 102, 0.20);
+      color: #ffd666;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .03em;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+    }
+
+    .official {
+      margin: 10px 0 16px;
+      color: #ffd666;
+      font-weight: 800;
+      font-size: 17px;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: rgba(255,255,255,0.72);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .amounts {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 22px;
+    }
+
+    .amount {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 20px;
+      padding: 17px 18px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.045));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      font: inherit;
+    }
+
+    .amount strong {
+      font-size: 17px;
+    }
+
+    .amount span {
+      color: rgba(255,255,255,0.58);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .amount.active {
+      border-color: rgba(255, 214, 102, 0.55);
+      box-shadow: inset 0 0 0 1px rgba(255, 214, 102, 0.12), 0 10px 30px rgba(255, 214, 102, 0.08);
+    }
+
+    .label {
+      margin: 18px 0 8px;
+      color: rgba(255,255,255,0.48);
+      font-size: 12px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .box {
+      border-radius: 18px;
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.11);
+      padding: 14px;
+      color: rgba(255,255,255,0.92);
+      word-break: break-all;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .copy {
+      width: 100%;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 19px;
+      padding: 16px 18px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      color: #111;
+      background: linear-gradient(135deg, #ffe58f, #f5b942);
+      box-shadow: 0 18px 38px rgba(245,185,66,0.20);
+    }
+
+    .qr {
+      width: fit-content;
+      margin: 22px auto 16px;
+      padding: 18px;
+      border-radius: 28px;
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+    }
+
+    .qr img {
+      display: block;
+      width: 230px;
+      height: 230px;
+    }
+
+    .warning {
+      margin-top: 18px;
+      padding: 15px;
+      border-radius: 20px;
+      background: rgba(255, 214, 102, 0.10);
+      border: 1px solid rgba(255, 214, 102, 0.22);
+      color: rgba(255,255,255,0.87);
+      font-size: 14px;
+      line-height: 1.52;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: rgba(255,255,255,0.46);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+
+    .wallet-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .wallet-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 18px;
+      padding: 15px 16px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.035));
+      font-weight: 850;
+    }
+
+    .wallet-link small {
+      color: rgba(255,255,255,0.55);
+      font-weight: 750;
+    }
+
+    .steps {
+      margin-top: 18px;
+      padding: 15px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .steps ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 420px) {
+      .card { padding: 23px; border-radius: 29px; }
+      h1 { font-size: 32px; }
+      .qr img { width: 210px; height: 210px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="topline">USDT • TRON TRC-20</div>
+
+    <h1>Support @amazondom666</h1>
+    <div class="official">Official donation page</div>
+    <p class="subtitle">Your support helps me create more AI videos and digital artwork.</p>
+
+    <section class="amounts" aria-label="Donation options">
+      <button class="amount active" onclick="setAmount(this, '10 USDT')">
+        <strong>💚 Donate 10 USDT</strong>
+        <span>Suggested</span>
+      </button>
+      <button class="amount" onclick="setAmount(this, '25 USDT')">
+        <strong>💙 Donate 25 USDT</strong>
+        <span>Supporter</span>
+      </button>
+      <button class="amount" onclick="setAmount(this, 'Custom amount')">
+        <strong>⭐ Custom Amount</strong>
+        <span>You choose</span>
+      </button>
+    </section>
+
+    <div class="label">Selected option</div>
+    <div class="box" id="selectedAmount">10 USDT</div>
+
+    <div class="label">Wallet address</div>
+    <div class="box mono" id="walletAddress">TPzd7SM7uw7TyPXcb9huAKsYm7vkBRaChb</div>
+
+    <button class="copy" onclick="copyWallet()">📋 Copy Wallet Address</button>
+
+    <div class="label">Open your wallet</div>
+    <div class="wallet-buttons">
+      <a class="wallet-link" href="trust://open_url" onclick="copyWallet()">Trust Wallet <small>copy + open</small></a>
+      <a class="wallet-link" href="https://link.trustwallet.com/open_url" onclick="copyWallet()">Trust Wallet Web <small>fallback</small></a>
+      <a class="wallet-link" href="https://www.binance.com/en/my/wallet/account/main/deposit/crypto/USDT" onclick="copyWallet()">Binance <small>deposit USDT</small></a>
+      <a class="wallet-link" href="https://www.okx.com/web3" onclick="copyWallet()">OKX Wallet <small>open wallet</small></a>
+      <a class="wallet-link" href="https://www.bybit.com/user/assets/deposit" onclick="copyWallet()">Bybit <small>deposit USDT</small></a>
+      <a class="wallet-link" href="https://www.coinbase.com/assets/usdt" onclick="copyWallet()">Coinbase <small>USDT page</small></a>
+      <a class="wallet-link" href="https://metamask.app.link/" onclick="copyWallet()">MetaMask <small>open app</small></a>
+      <a class="wallet-link" href="https://phantom.app/ul/browse/" onclick="copyWallet()">Phantom <small>open app</small></a>
+    </div>
+
+    <div class="steps">
+      <strong>How to donate</strong>
+      <ol>
+        <li>Copy the wallet address.</li>
+        <li>Open your wallet or exchange app.</li>
+        <li>Send USDT using the TRON (TRC-20) network.</li>
+      </ol>
+    </div>
+
+    <div class="qr">
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzdtbSIgaGVpZ2h0PSIzN21tIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzNyAzNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNCw0SDVWNUg0ek01LDRINlY1SDV6TTYsNEg3VjVINnpNNyw0SDhWNUg3ek04LDRIOVY1SDh6TTksNEgxMFY1SDl6TTEwLDRIMTFWNUgxMHpNMTMsNEgxNFY1SDEzek0xNCw0SDE1VjVIMTR6TTE3LDRIMThWNUgxN3pNMjAsNEgyMVY1SDIwek0yMyw0SDI0VjVIMjN6TTI2LDRIMjdWNUgyNnpNMjcsNEgyOFY1SDI3ek0yOCw0SDI5VjVIMjh6TTI5LDRIMzBWNUgyOXpNMzAsNEgzMVY1SDMwek0zMSw0SDMyVjVIMzF6TTMyLDRIMzNWNUgzMnpNNCw1SDVWNkg0ek0xMCw1SDExVjZIMTB6TTEzLDVIMTRWNkgxM3pNMTQsNUgxNVY2SDE0ek0xNSw1SDE2VjZIMTV6TTE2LDVIMTdWNkgxNnpNMTcsNUgxOFY2SDE3ek0xOCw1SDE5VjZIMTh6TTE5LDVIMjBWNkgxOXpNMjQsNUgyNVY2SDI0ek0yNiw1SDI3VjZIMjZ6TTMyLDVIMzNWNkgzMnpNNCw2SDVWN0g0ek02LDZIN1Y3SDZ6TTcsNkg4VjdIN3pNOCw2SDlWN0g4ek0xMCw2SDExVjdIMTB6TTEzLDZIMTRWN0gxM3pNMTcsNkgxOFY3SDE3ek0yMCw2SDIxVjdIMjB6TTIxLDZIMjJWN0gyMXpNMjMsNkgyNFY3SDIzek0yNiw2SDI3VjdIMjZ6TTI4LDZIMjlWN0gyOHpNMjksNkgzMFY3SDI5ek0zMCw2SDMxVjdIMzB6TTMyLDZIMzNWN0gzMnpNNCw3SDVWOEg0ek02LDdIN1Y4SDZ6TTcsN0g4VjhIN3pNOCw3SDlWOEg4ek0xMCw3SDExVjhIMTB6TTEzLDdIMTRWOEgxM3pNMTYsN0gxN1Y4SDE2ek0xNyw3SDE4VjhIMTd6TTE4LDdIMTlWOEgxOHpNMTksN0gyMFY4SDE5ek0yMSw3SDIyVjhIMjF6TTIyLDdIMjNWOEgyMnpNMjYsN0gyN1Y4SDI2ek0yOCw3SDI5VjhIMjh6TTI5LDdIMzBWOEgyOXpNMzAsN0gzMVY4SDMwek0zMiw3SDMzVjhIMzJ6TTQsOEg1VjlINHpNNiw4SDdWOUg2ek03LDhIOFY5SDd6TTgsOEg5VjlIOHpNMTAsOEgxMVY5SDEwek0xMyw4SDE0VjlIMTN6TTE0LDhIMTVWOUgxNHpNMTUsOEgxNlY5SDE1ek0xNiw4SDE3VjlIMTZ6TTE3LDhIMThWOUgxN3pNMTgsOEgxOVY5SDE4ek0yMCw4SDIxVjlIMjB6TTIxLDhIMjJWOUgyMXpNMjMsOEgyNFY5SDIzek0yNiw4SDI3VjlIMjZ6TTI4LDhIMjlWOUgyOHpNMjksOEgzMFY5SDI5ek0zMCw4SDMxVjlIMzB6TTMyLDhIMzNWOUgzMnpNNCw5SDVWMTBINHpNMTAsOUgxMVYxMEgxMHpNMTIsOUgxM1YxMEgxMnpNMTMsOUgxNFYxMEgxM3pNMTQsOUgxNVYxMEgxNHpNMTYsOUgxN1YxMEgxNnpNMTcsOUgxOFYxMEgxN3pNMTgsOUgxOVYxMEgxOHpNMjMsOUgyNFYxMEgyM3pNMjYsOUgyN1YxMEgyNnpNMzIsOUgzM1YxMEgzMnpNNCwxMEg1VjExSDR6TTUsMTBINlYxMUg1ek02LDEwSDdWMTFINnpNNywxMEg4VjExSDd6TTgsMTBIOVYxMUg4ek05LDEwSDEwVjExSDl6TTEwLDEwSDExVjExSDEwek0xMiwxMEgxM1YxMUgxMnpNMTQsMTBIMTVWMTFIMTR6TTE2LDEwSDE3VjExSDE2ek0xOCwxMEgxOVYxMUgxOHpNMjAsMTBIMjFWMTFIMjB6TTIyLDEwSDIzVjExSDIyek0yNCwxMEgyNVYxMUgyNHpNMjYsMTBIMjdWMTFIMjZ6TTI3LDEwSDI4VjExSDI3ek0yOCwxMEgyOVYxMUgyOHpNMjksMTBIMzBWMTFIMjl6TTMwLDEwSDMxVjExSDMwek0zMSwxMEgzMlYxMUgzMXpNMzIsMTBIMzNWMTFIMzJ6TTEzLDExSDE0VjEySDEzek0xNSwxMUgxNlYxMkgxNXpNMTYsMTFIMTdWMTJIMTZ6TTE4LDExSDE5VjEySDE4ek0yMSwxMUgyMlYxMkgyMXpNMjIsMTFIMjNWMTJIMjJ6TTQsMTJINVYxM0g0ek03LDEySDhWMTNIN3pNOSwxMkgxMFYxM0g5ek0xMCwxMkgxMVYxM0gxMHpNMTIsMTJIMTNWMTNIMTJ6TTE0LDEySDE1VjEzSDE0ek0xOSwxMkgyMFYxM0gxOXpNMjAsMTJIMjFWMTNIMjB6TTI1LDEySDI2VjEzSDI1ek0yNywxMkgyOFYxM0gyN3pNNiwxM0g3VjE0SDZ6TTksMTNIMTBWMTRIOXpNMTQsMTNIMTVWMTRIMTR6TTE1LDEzSDE2VjE0SDE1ek0xOCwxM0gxOVYxNEgxOHpNMTksMTNIMjBWMTRIMTl6TTIzLDEzSDI0VjE0SDIzek0yNCwxM0gyNVYxNEgyNHpNMjYsMTNIMjdWMTRIMjZ6TTMxLDEzSDMyVjE0SDMxek0zMiwxM0gzM1YxNEgzMnpNNywxNEg4VjE1SDd6TTgsMTRIOVYxNUg4ek05LDE0SDEwVjE1SDl6TTEwLDE0SDExVjE1SDEwek0xMSwxNEgxMlYxNUgxMXpNMTIsMTRIMTNWMTVIMTJ6TTE0LDE0SDE1VjE1SDE0ek0xNiwxNEgxN1YxNUgxNnpNMjMsMTRIMjRWMTVIMjN6TTI2LDE0SDI3VjE1SDI2ek0yOCwxNEgyOVYxNUgyOHpNMjksMTRIMzBWMTVIMjl6TTMwLDE0SDMxVjE1SDMwek0zMSwxNEgzMlYxNUgzMXpNNCwxNUg1VjE2SDR6TTUsMTVINlYxNkg1ek02LDE1SDdWMTZINnpNNywxNUg4VjE2SDd6TTgsMTVIOVYxNkg4ek0xMSwxNUgxMlYxNkgxMXpNMTIsMTVIMTNWMTZIMTJ6TTEzLDE1SDE0VjE2SDEzek0xNiwxNUgxN1YxNkgxNnpNMTgsMTVIMTlWMTZIMTh6TTIyLDE1SDIzVjE2SDIyek0yMywxNUgyNFYxNkgyM3pNMjcsMTVIMjhWMTZIMjd6TTI5LDE1SDMwVjE2SDI5ek0zMCwxNUgzMVYxNkgzMHpNMzEsMTVIMzJWMTZIMzF6TTMyLDE1SDMzVjE2SDMyek00LDE2SDVWMTdINHpNOCwxNkg5VjE3SDh6TTksMTZIMTBWMTdIOXpNMTAsMTZIMTFWMTdIMTB6TTExLDE2SDEyVjE3SDExek0xMiwxNkgxM1YxN0gxMnpNMTMsMTZIMTRWMTdIMTN6TTE0LDE2SDE1VjE3SDE0ek0xNSwxNkgxNlYxN0gxNXpNMjAsMTZIMjFWMTdIMjB6TTIxLDE2SDIyVjE3SDIxek0yMiwxNkgyM1YxN0gyMnpNMjUsMTZIMjZWMTdIMjV6TTI2LDE2SDI3VjE3SDI2ek0yNywxNkgyOFYxN0gyN3pNMjgsMTZIMjlWMTdIMjh6TTI5LDE2SDMwVjE3SDI5ek00LDE3SDVWMThINHpNNSwxN0g2VjE4SDV6TTcsMTdIOFYxOEg3ek04LDE3SDlWMThIOHpNOSwxN0gxMFYxOEg5ek0xNSwxN0gxNlYxOEgxNXpNMTYsMTdIMTdWMThIMTZ6TTIxLDE3SDIyVjE4SDIxek0yMiwxN0gyM1YxOEgyMnpNMjMsMTdIMjRWMThIMjN6TTI0LDE3SDI1VjE4SDI0ek0yNiwxN0gyN1YxOEgyNnpNMjksMTdIMzBWMThIMjl6TTUsMThINlYxOUg1ek02LDE4SDdWMTlINnpNMTAsMThIMTFWMTlIMTB6TTE0LDE4SDE1VjE5SDE0ek0xNSwxOEgxNlYxOUgxNXpNMjAsMThIMjFWMTlIMjB6TTI2LDE4SDI3VjE5SDI2ek0yOSwxOEgzMFYxOUgyOXpNMzAsMThIMzFWMTlIMzB6TTMxLDE4SDMyVjE5SDMxek0zMiwxOEgzM1YxOUgzMnpNNSwxOUg2VjIwSDV6TTYsMTlIN1YyMEg2ek03LDE5SDhWMjBIN3pNMTIsMTlIMTNWMjBIMTJ6TTE0LDE5SDE1VjIwSDE0ek0xNiwxOUgxN1YyMEgxNnpNMTcsMTlIMThWMjBIMTd6TTE4LDE5SDE5VjIwSDE4ek0xOSwxOUgyMFYyMEgxOXpNMjEsMTlIMjJWMjBIMjF6TTIyLDE5SDIzVjIwSDIyek0yMywxOUgyNFYyMEgyM3pNMjUsMTlIMjZWMjBIMjV6TTMxLDE5SDMyVjIwSDMxek00LDIwSDVWMjFINHpNNSwyMEg2VjIxSDV6TTcsMjBIOFYyMUg3ek05LDIwSDEwVjIxSDl6TTEwLDIwSDExVjIxSDEwek0xNSwyMEgxNlYyMUgxNXpNMTYsMjBIMTdWMjFIMTZ6TTE3LDIwSDE4VjIxSDE3ek0xOCwyMEgxOVYyMUgxOHpNMTksMjBIMjBWMjFIMTl6TTIxLDIwSDIyVjIxSDIxek0yNCwyMEgyNVYyMUgyNHpNMjUsMjBIMjZWMjFIMjV6TTI3LDIwSDI4VjIxSDI3ek0zMCwyMEgzMVYyMUgzMHpNNSwyMUg2VjIySDV6TTgsMjFIOVYyMkg4ek0xMSwyMUgxMlYyMkgxMXpNMTMsMjFIMTRWMjJIMTN6TTE0LDIxSDE1VjIySDE0ek0xNiwyMUgxN1YyMkgxNnpNMjAsMjFIMjFWMjJIMjB6TTIyLDIxSDIzVjIySDIyek0yOSwyMUgzMFYyMkgyOXpNMzAsMjFIMzFWMjJIMzB6TTQsMjJINVYyM0g0ek02LDIySDdWMjNINnpNNywyMkg4VjIzSDd6TTEwLDIySDExVjIzSDEwek0xMiwyMkgxM1YyM0gxMnpNMTMsMjJIMTRWMjNIMTN6TTE3LDIySDE4VjIzSDE3ek0yMSwyMkgyMlYyM0gyMXpNMjcsMjJIMjhWMjNIMjd6TTI5LDIySDMwVjIzSDI5ek0zMSwyMkgzMlYyM0gzMXpNMzIsMjJIMzNWMjNIMzJ6TTYsMjNIN1YyNEg2ek03LDIzSDhWMjRIN3pNOCwyM0g5VjI0SDh6TTE2LDIzSDE3VjI0SDE2ek0xNywyM0gxOFYyNEgxN3pNMjAsMjNIMjFWMjRIMjB6TTIxLDIzSDIyVjI0SDIxek0yNSwyM0gyNlYyNEgyNXpNMjYsMjNIMjdWMjRIMjZ6TTI5LDIzSDMwVjI0SDI5ek0zMSwyM0gzMlYyNEgzMXpNMzIsMjNIMzNWMjRIMzJ6TTQsMjRINVYyNUg0ek05LDI0SDEwVjI1SDl6TTEwLDI0SDExVjI1SDEwek0xNCwyNEgxNVYyNUgxNHpNMTUsMjRIMTZWMjVIMTV6TTE4LDI0SDE5VjI1SDE4ek0yMCwyNEgyMVYyNUgyMHpNMjMsMjRIMjRWMjVIMjN6TTI0LDI0SDI1VjI1SDI0ek0yNSwyNEgyNlYyNUgyNXpNMjYsMjRIMjdWMjVIMjZ6TTI3LDI0SDI4VjI1SDI3ek0yOCwyNEgyOVYyNUgyOHpNMzEsMjRIMzJWMjVIMzF6TTMyLDI0SDMzVjI1SDMyek0xMiwyNUgxM1YyNkgxMnpNMTMsMjVIMTRWMjZIMTN6TTE3LDI1SDE4VjI2SDE3ek0xOSwyNUgyMFYyNkgxOXpNMjAsMjVIMjFWMjZIMjB6TTI0LDI1SDI1VjI2SDI0ek0yOCwyNUgyOVYyNkgyOHpNMzAsMjVIMzFWMjZIMzB6TTQsMjZINVYyN0g0ek01LDI2SDZWMjdINXpNNiwyNkg3VjI3SDZ6TTcsMjZIOFYyN0g3ek04LDI2SDlWMjdIOHpNOSwyNkgxMFYyN0g5ek0xMCwyNkgxMVYyN0gxMHpNMTMsMjZIMTRWMjdIMTN6TTE2LDI2SDE3VjI3SDE2ek0xNywyNkgxOFYyN0gxN3pNMTgsMjZIMTlWMjdIMTh6TTIwLDI2SDIxVjI3SDIwek0yMSwyNkgyMlYyN0gyMXpNMjIsMjZIMjNWMjdIMjJ6TTI0LDI2SDI1VjI3SDI0ek0yNiwyNkgyN1YyN0gyNnpNMjgsMjZIMjlWMjdIMjh6TTMwLDI2SDMxVjI3SDMwek0zMSwyNkgzMlYyN0gzMXpNNCwyN0g1VjI4SDR6TTEwLDI3SDExVjI4SDEwek0xMiwyN0gxM1YyOEgxMnpNMTMsMjdIMTRWMjhIMTN6TTE3LDI3SDE4VjI4SDE3ek0xOSwyN0gyMFYyOEgxOXpNMjIsMjdIMjNWMjhIMjJ6TTIzLDI3SDI0VjI4SDIzek0yNCwyN0gyNVYyOEgyNHpNMjgsMjdIMjlWMjhIMjh6TTI5LDI3SDMwVjI4SDI5ek0zMCwyN0gzMVYyOEgzMHpNMzEsMjdIMzJWMjhIMzF6TTMyLDI3SDMzVjI4SDMyek00LDI4SDVWMjlINHpNNiwyOEg3VjI5SDZ6TTcsMjhIOFYyOUg3ek04LDI4SDlWMjlIOHpNMTAsMjhIMTFWMjlIMTB6TTE1LDI4SDE2VjI5SDE1ek0xOCwyOEgxOVYyOUgxOHpNMjAsMjhIMjFWMjlIMjB6TTI0LDI4SDI1VjI5SDI0ek0yNSwyOEgyNlYyOUgyNXpNMjYsMjhIMjdWMjlIMjZ6TTI3LDI4SDI4VjI5SDI3ek0yOCwyOEgyOVYyOUgyOHpNMjksMjhIMzBWMjlIMjl6TTMyLDI4SDMzVjI5SDMyek00LDI5SDVWMzBINHpNNiwyOUg3VjMwSDZ6TTcsMjlIOFYzMEg3ek04LDI5SDlWMzBIOHpNMTAsMjlIMTFWMzBIMTB6TTEyLDI5SDEzVjMwSDEyek0xMywyOUgxNFYzMEgxM3pNMTQsMjlIMTVWMzBIMTR6TTE1LDI5SDE2VjMwSDE1ek0xNywyOUgxOFYzMEgxN3pNMTgsMjlIMTlWMzBIMTh6TTIxLDI5SDIyVjMwSDIxek0yNCwyOUgyNVYzMEgyNHpNMjYsMjlIMjdWMzBIMjZ6TTI4LDI5SDI5VjMwSDI4ek0yOSwyOUgzMFYzMEgyOXpNMzEsMjlIMzJWMzBIMzF6TTQsMzBINVYzMUg0ek02LDMwSDdWMzFINnpNNywzMEg4VjMxSDd6TTgsMzBIOVYzMUg4ek0xMCwzMEgxMVYzMUgxMHpNMTMsMzBIMTRWMzFIMTN6TTE0LDMwSDE1VjMxSDE0ek0xNSwzMEgxNlYzMUgxNXpNMTgsMzBIMTlWMzFIMTh6TTIwLDMwSDIxVjMxSDIwek0yMiwzMEgyM1YzMUgyMnpNMjgsMzBIMjlWMzFIMjh6TTI5LDMwSDMwVjMxSDI5ek0zMCwzMEgzMVYzMUgzMHpNMzIsMzBIMzNWMzFIMzJ6TTQsMzFINVYzMkg0ek0xMCwzMUgxMVYzMkgxMHpNMTMsMzFIMTRWMzJIMTN6TTE0LDMxSDE1VjMySDE0ek0xNSwzMUgxNlYzMkgxNXpNMjEsMzFIMjJWMzJIMjF6TTIzLDMxSDI0VjMySDIzek0yNCwzMUgyNVYzMkgyNHpNMjUsMzFIMjZWMzJIMjV6TTMxLDMxSDMyVjMySDMxek00LDMySDVWMzNINHpNNSwzMkg2VjMzSDV6TTYsMzJIN1YzM0g2ek03LDMySDhWMzNIN3pNOCwzMkg5VjMzSDh6TTksMzJIMTBWMzNIOXpNMTAsMzJIMTFWMzNIMTB6TTEyLDMySDEzVjMzSDEyek0xNSwzMkgxNlYzM0gxNXpNMTgsMzJIMTlWMzNIMTh6TTIwLDMySDIxVjMzSDIwek0yNCwzMkgyNVYzM0gyNHpNMjUsMzJIMjZWMzNIMjV6TTI2LDMySDI3VjMzSDI2ek0yNywzMkgyOFYzM0gyN3pNMjgsMzJIMjlWMzNIMjh6TTMxLDMySDMyVjMzSDMxeiIgaWQ9InFyLXBhdGgiIGZpbGw9IiMwMDAwMDAiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiLz48L3N2Zz4=" alt="USDT TRC-20 wallet QR code">
+    </div>
+
+    <div class="warning">
+      <strong>Important:</strong> send only <strong>USDT</strong> on the <strong>TRON (TRC-20)</strong> network. Sending funds through any other network may result in permanent loss of funds.
+    </div>
+
+    <div class="footer">© @amazondom666</div>
+  </main>
+
+  <script>
+    const wallet = "TPzd7SM7uw7TyPXcb9huAKsYm7vkBRaChb";
+
+    function setAmount(button, amount) {
+      document.getElementById("selectedAmount").textContent = amount;
+      document.querySelectorAll(".amount").forEach(el => el.classList.remove("active"));
+      button.classList.add("active");
+      document.getElementById("walletAddress").scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function copyWallet() {
+      navigator.clipboard.writeText(wallet).then(() => {
+        const btn = document.querySelector(".copy");
+        const old = btn.textContent;
+        btn.textContent = "✅ Address Copied";
+        setTimeout(() => btn.textContent = old, 1800);
+      }).catch(() => {
+        alert("Copy failed. Please copy the wallet address manually.");
+      });
+    }
+  </script>
+</body>
+</html>
